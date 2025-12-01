@@ -1,3 +1,44 @@
+这是 CS:APP Cache Lab 的讲义目录。
+
+************************
+运行自动评分器：
+************************
+
+在运行自动评分器之前，先编译你的代码：
+    linux> make
+
+检查你的缓存模拟器是否正确：
+    linux> ./test-csim
+
+检查你的矩阵转置函数的正确性与性能：
+    linux> ./test-trans -M 32 -N 32
+    linux> ./test-trans -M 64 -N 64
+    linux> ./test-trans -M 61 -N 67
+
+一次性检查所有内容（这是授课教师实际运行的程序）：
+    linux> ./driver.py
+
+******
+文件说明：
+******
+
+# 你需要修改并提交的两个文件
+csim.c       你的缓存模拟器
+trans.c      你的矩阵转置函数
+
+# 用于评估你的模拟器和转置函数的工具
+Makefile     用于构建模拟器和相关工具
+README       本文档
+driver.py*   驱动程序，用于运行 test-csim 和 test-trans
+cachelab.c   必需的辅助函数
+cachelab.h   必需的头文件
+csim-ref*    参考缓存模拟器的可执行文件
+test-csim*   测试你的缓存模拟器的工具
+test-trans.c 测试你的转置函数的工具
+tracegen.c   test-trans 使用的辅助程序
+traces/      test-csim 使用的访存轨迹文件
+
+
 This is the handout directory for the CS:APP Cache Lab. 
 
 ************************
